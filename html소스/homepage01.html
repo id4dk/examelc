@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=1024">
+		<!--
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		-->
+		<meta name="keyword" content="여기에 중요한 단어를 나열">
+		
+		<!-- <link rel="stylesheet" href="./css/main.css"/> -->
+		<style>
+		*{
+			margin : 0;
+			padding : 0;
+			font-size: 16px;
+			text-decoration: none;
+			list-style-type: none;
+		}
+		body{
+			background-color: #ffd9b3;
+		}
+		#main_frame{
+			margin : 0 auto;
+			width : 960px;
+		}
+		h1{
+			font-size: 250%; 
+			font-family: "Times New Roman", Georgia, Serif;
+			font-weight: bold;
+		}
+		header{
+			width : 960px;
+			height : 200px;
+			border : 1px solid red;
+		}
+		header>div.headerlogoimg{
+			width : 82px;
+			height : 82px;
+			margin : 20px;
+			border-radius: 41px;
+			overflow: hidden;
+			float : left;
+		}
+		header>div.headerlogoimg>a{
+			margin : 0;
+			padding : 0;
+		}
+		header>hgroup{
+			width : 450px;
+			margin : 20px;
+			float : left;
+			
+		}	
+		header>form{
+			width : 300px;
+			margin : 20px 0 20px 20px;
+			
+			float : right;
+		}
+		header>form>input{
+			margin : 5px;
+		}
+		nav.main_nav{
+			border : 1px solid red;
+		}
+		nav.main_nav{
+			width : 960px;
+			height : 80px;
+			clear : both;
+			overflow : hidden;
+		}
+		nav.main_nav ul{
+			width : 700px;
+			height : 50px;
+			line-height: 80px;
+			margin : 40px 0 20px 220px;
+			float : right;
+		}
+		nav.main_nav ul li{
+			width : 100px;
+			height : 30px;
+			border : 1px solid black; 
+			float : left;
+		}
+		nav.main_nav ul li:first-child{
+			border-radius: 5px 0 0 5px;
+		}
+		nav.main_nav ul li:last-child{
+			border-radius: 0 5px 5px 0;
+		}
+		nav.main_nav ul li>a{
+			text-align : center;
+			line-height : 30px;
+			display : block;
+			background-color : #bfff00;
+			color : black;
+		}
+		nav.main_nav ul li>a:hover{
+			background-color : yellow;
+			color : blue;
+		}
+		
+		div.content{
+			clear : both;
+			width : 960px;
+			border : 1px solid red;
+			
+		}
+		
+		div.content>nav.sub_nav{
+			width : 130px;
+			height : 500px;
+			margin : 20px;
+			background-color : yellow;
+			float : left;
+		}
+		
+		div.content>section.consection{
+			width : 760px;
+			margin : 20px 20px 20px 0px;
+			float : right;
+		}
+		div.content>section.consection>article{
+		/*	display : none;	 */
+			margin : 20px 0;
+			border : 1px solid black;
+		}
+		/*
+		div.content>section.consection>article:first-child{
+			display : block;	
+		}*/
+		div.content>section.consection>article h4{
+			margin : 5px;
+			font-size: 1.3em;
+		}
+		div.content>section.consection>article h4::before{
+			 content: "**subject : ";
+		}
+		div.content>section article p{
+			font-size: 0.9em;
+			letter-spacing: 0.1;
+			text-indent: 8px;
+		}
+		footer{
+			clear : both;
+		}
+		
+		</style>
+		<script src=""></script>
+		
+		
+		<title>화면 layout 실습</title>
+	</head>
+	<body>
+	<div id="main_frame">
+		<header>
+			<div class="headerlogoimg">
+				<a href="/" ><img src="http://placehold.it/80x80" alt="회사 로고 이미지" title="회사로고 이미지" /></a>
+			</div>
+			
+			<hgroup>
+				<h1>Web Publisher</h1>
+				<h3>HTML</h3>
+				<h3>Cascading Style sheet</h3>
+			</hgroup>
+			<form action="" method="post">
+				<input type="text" name="id" placeholder="id 입력(aaa@bbb.ccc)" required="required" /><br />
+				<input type="password" name="pwd" placeholder="비밀번호입력" required="required" /><br />
+				<input type="submit" value="로그인" />
+				<button><a href="memberjoin.html">회원가입</a></button>
+			</form>
+		</header>
+		
+ 		<nav class="nav main_nav">
+			<ul>
+				<li><a href="#">main navi 1</a></li>
+				<li><a href="#">main navi 2</a></li>
+				<li><a href="#">main navi 3</a></li>
+				<li><a href="#">main navi 4</a></li>
+				<li><a href="#">main navi 5</a></li>
+				<li><a href="#">main navi 6</a></li>
+			</ul>
+		</nav>
+		
+		<div class="content">
+			<nav class="nav sub_nav">
+				<ul>
+					<li><a href="#">sub navi1</a></li>
+					<li><a href="#">sub navi2</a></li>
+					<li><a href="#">sub navi3</a></li>
+					<li><a href="#">sub navi4</a></li>
+					<li><a href="#">sub navi5</a></li>
+					<li><a href="#">sub navi6</a></li>
+				</ul>
+			</nav>
+			<section class= "consection">
+				<article id="story1">
+					<h4>What is Lorem Ipsum?</h4>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				</article>
+				<article id="story2">
+					<h4>Why do we use it?</h4>
+					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+				</article>
+				<article id="story3">
+					<h4>Where does it come from?</h4>
+					<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+	
+					The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+				</article>
+				<article id="story3">
+					<h4>Where can I get some?</h4>
+					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+				</article>
+			</section>
+		</div>
+		<footer>
+			<address>
+			㈜멀티캠퍼스 본사 : 서울특별시 강남구 언주로 508 10~17층(역삼동, 서울상록빌딩)&nbsp;&nbsp;대표이사 : 김대희<br />
+			멀티캠퍼스 교육센터(멀티스퀘어) : 서울특별시 강남구 테헤란로 212 (역삼동 718-5번지)<br />
+			사업자등록번호 : 104-81-53114&nbsp;&nbsp;&nbsp;&nbsp;통신판매신고번호 : 제2016-서울강남-00515호&nbsp;&nbsp;&nbsp;&nbsp;개인정보관리 최고책임자 : 최호득 상무<br />
+			COPYRIGHT BY MULTICAMPUS CO.LTD. ALL RIGHT RESERVED <br />
+			고객센터 1544-9001&nbsp;&nbsp;&nbsp;&nbsp;멀티스퀘어 교육지원센터 02-3429-5114&nbsp;&nbsp;&nbsp;&nbsp;팩스 070-7159-3860&nbsp;&nbsp;&nbsp;&nbsp;이메일 multicampus5114@multicampus.com
+			</address>
+		</footer> -->
+	</div>
+	</body>
+</html>
